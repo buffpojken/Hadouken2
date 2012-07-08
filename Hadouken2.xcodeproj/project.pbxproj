@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EF4342A15AA3A2B00A4659A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342915AA3A2B00A4659A /* UIKit.framework */; };
+		4EF4342C15AA3A2B00A4659A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342B15AA3A2B00A4659A /* Foundation.framework */; };
+		4EF4342E15AA3A2B00A4659A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */; };
+		4EF4343415AA3A2B00A4659A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4343215AA3A2B00A4659A /* InfoPlist.strings */; };
+		4EF4343615AA3A2B00A4659A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4343515AA3A2B00A4659A /* main.m */; };
+		4EF4343A15AA3A2B00A4659A /* HDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4343915AA3A2B00A4659A /* HDAppDelegate.m */; };
+		4EF4343D15AA3A2B00A4659A /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4343C15AA3A2B00A4659A /* HDViewController.m */; };
+		4EF4347E15AA3B4E00A4659A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4346A15AA3B4E00A4659A /* AFHTTPClient.m */; };
+		4EF4347F15AA3B4E00A4659A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4346C15AA3B4E00A4659A /* AFHTTPRequestOperation.m */; };
+		4EF4348015AA3B4E00A4659A /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4346E15AA3B4E00A4659A /* AFImageRequestOperation.m */; };
+		4EF4348115AA3B4E00A4659A /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347015AA3B4E00A4659A /* AFJSONRequestOperation.m */; };
+		4EF4348215AA3B4E00A4659A /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347215AA3B4E00A4659A /* AFJSONUtilities.m */; };
+		4EF4348315AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347415AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.m */; };
+		4EF4348415AA3B4E00A4659A /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347715AA3B4E00A4659A /* AFPropertyListRequestOperation.m */; };
+		4EF4348515AA3B4E00A4659A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347915AA3B4E00A4659A /* AFURLConnectionOperation.m */; };
+		4EF4348615AA3B4E00A4659A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347B15AA3B4E00A4659A /* AFXMLRequestOperation.m */; };
+		4EF4348715AA3B4E00A4659A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347D15AA3B4E00A4659A /* UIImageView+AFNetworking.m */; };
+		4EF4348E15AA3CCA00A4659A /* tablet.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4348D15AA3CCA00A4659A /* tablet.png */; };
+		4EF4349415AA3D8900A4659A /* HDTabletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4349315AA3D8900A4659A /* HDTabletCell.m */; };
+		4EF4349815AA428800A4659A /* Enochian.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4349715AA428800A4659A /* Enochian.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4EF4342515AA3A2B00A4659A /* Hadouken2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hadouken2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF4342915AA3A2B00A4659A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4EF4342B15AA3A2B00A4659A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4EF4343115AA3A2B00A4659A /* Hadouken2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hadouken2-Info.plist"; sourceTree = "<group>"; };
+		4EF4343315AA3A2B00A4659A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EF4343515AA3A2B00A4659A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EF4343715AA3A2B00A4659A /* Hadouken2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hadouken2-Prefix.pch"; sourceTree = "<group>"; };
+		4EF4343815AA3A2B00A4659A /* HDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDAppDelegate.h; sourceTree = "<group>"; };
+		4EF4343915AA3A2B00A4659A /* HDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDAppDelegate.m; sourceTree = "<group>"; };
+		4EF4343B15AA3A2B00A4659A /* HDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDViewController.h; sourceTree = "<group>"; };
+		4EF4343C15AA3A2B00A4659A /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
+		4EF4346915AA3B4E00A4659A /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		4EF4346A15AA3B4E00A4659A /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		4EF4346B15AA3B4E00A4659A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		4EF4346C15AA3B4E00A4659A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		4EF4346D15AA3B4E00A4659A /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		4EF4346E15AA3B4E00A4659A /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		4EF4346F15AA3B4E00A4659A /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		4EF4347015AA3B4E00A4659A /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		4EF4347115AA3B4E00A4659A /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		4EF4347215AA3B4E00A4659A /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		4EF4347315AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		4EF4347415AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		4EF4347515AA3B4E00A4659A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		4EF4347615AA3B4E00A4659A /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		4EF4347715AA3B4E00A4659A /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		4EF4347815AA3B4E00A4659A /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		4EF4347915AA3B4E00A4659A /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		4EF4347A15AA3B4E00A4659A /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		4EF4347B15AA3B4E00A4659A /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		4EF4347C15AA3B4E00A4659A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		4EF4347D15AA3B4E00A4659A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		4EF4348D15AA3CCA00A4659A /* tablet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tablet.png; sourceTree = "<group>"; };
+		4EF4349215AA3D8900A4659A /* HDTabletCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTabletCell.h; sourceTree = "<group>"; };
+		4EF4349315AA3D8900A4659A /* HDTabletCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTabletCell.m; sourceTree = "<group>"; };
+		4EF4349715AA428800A4659A /* Enochian.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Enochian.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EF4342215AA3A2B00A4659A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF4342A15AA3A2B00A4659A /* UIKit.framework in Frameworks */,
+				4EF4342C15AA3A2B00A4659A /* Foundation.framework in Frameworks */,
+				4EF4342E15AA3A2B00A4659A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EF4341A15AA3A2B00A4659A = {
+			isa = PBXGroup;
+			children = (
+				4EF4342F15AA3A2B00A4659A /* Hadouken2 */,
+				4EF4342815AA3A2B00A4659A /* Frameworks */,
+				4EF4342615AA3A2B00A4659A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EF4342615AA3A2B00A4659A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4342515AA3A2B00A4659A /* Hadouken2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EF4342815AA3A2B00A4659A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4342915AA3A2B00A4659A /* UIKit.framework */,
+				4EF4342B15AA3A2B00A4659A /* Foundation.framework */,
+				4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EF4342F15AA3A2B00A4659A /* Hadouken2 */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4348815AA3C2200A4659A /* Resources */,
+				4EF4344615AA3B0C00A4659A /* Utils */,
+				4EF4343815AA3A2B00A4659A /* HDAppDelegate.h */,
+				4EF4343915AA3A2B00A4659A /* HDAppDelegate.m */,
+				4EF4343B15AA3A2B00A4659A /* HDViewController.h */,
+				4EF4343C15AA3A2B00A4659A /* HDViewController.m */,
+				4EF4343015AA3A2B00A4659A /* Supporting Files */,
+				4EF4349215AA3D8900A4659A /* HDTabletCell.h */,
+				4EF4349315AA3D8900A4659A /* HDTabletCell.m */,
+			);
+			path = Hadouken2;
+			sourceTree = "<group>";
+		};
+		4EF4343015AA3A2B00A4659A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4343115AA3A2B00A4659A /* Hadouken2-Info.plist */,
+				4EF4343215AA3A2B00A4659A /* InfoPlist.strings */,
+				4EF4343515AA3A2B00A4659A /* main.m */,
+				4EF4343715AA3A2B00A4659A /* Hadouken2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EF4344615AA3B0C00A4659A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4344715AA3B1100A4659A /* libs */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		4EF4344715AA3B1100A4659A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4346815AA3B4E00A4659A /* AFNetworking */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		4EF4346815AA3B4E00A4659A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4346915AA3B4E00A4659A /* AFHTTPClient.h */,
+				4EF4346A15AA3B4E00A4659A /* AFHTTPClient.m */,
+				4EF4346B15AA3B4E00A4659A /* AFHTTPRequestOperation.h */,
+				4EF4346C15AA3B4E00A4659A /* AFHTTPRequestOperation.m */,
+				4EF4346D15AA3B4E00A4659A /* AFImageRequestOperation.h */,
+				4EF4346E15AA3B4E00A4659A /* AFImageRequestOperation.m */,
+				4EF4346F15AA3B4E00A4659A /* AFJSONRequestOperation.h */,
+				4EF4347015AA3B4E00A4659A /* AFJSONRequestOperation.m */,
+				4EF4347115AA3B4E00A4659A /* AFJSONUtilities.h */,
+				4EF4347215AA3B4E00A4659A /* AFJSONUtilities.m */,
+				4EF4347315AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.h */,
+				4EF4347415AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.m */,
+				4EF4347515AA3B4E00A4659A /* AFNetworking.h */,
+				4EF4347615AA3B4E00A4659A /* AFPropertyListRequestOperation.h */,
+				4EF4347715AA3B4E00A4659A /* AFPropertyListRequestOperation.m */,
+				4EF4347815AA3B4E00A4659A /* AFURLConnectionOperation.h */,
+				4EF4347915AA3B4E00A4659A /* AFURLConnectionOperation.m */,
+				4EF4347A15AA3B4E00A4659A /* AFXMLRequestOperation.h */,
+				4EF4347B15AA3B4E00A4659A /* AFXMLRequestOperation.m */,
+				4EF4347C15AA3B4E00A4659A /* UIImageView+AFNetworking.h */,
+				4EF4347D15AA3B4E00A4659A /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		4EF4348815AA3C2200A4659A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4349715AA428800A4659A /* Enochian.ttf */,
+				4EF4348D15AA3CCA00A4659A /* tablet.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EF4342415AA3A2B00A4659A /* Hadouken2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF4344315AA3A2B00A4659A /* Build configuration list for PBXNativeTarget "Hadouken2" */;
+			buildPhases = (
+				4EF4342115AA3A2B00A4659A /* Sources */,
+				4EF4342215AA3A2B00A4659A /* Frameworks */,
+				4EF4342315AA3A2B00A4659A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hadouken2;
+			productName = Hadouken2;
+			productReference = 4EF4342515AA3A2B00A4659A /* Hadouken2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EF4341C15AA3A2B00A4659A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HD;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 4EF4341F15AA3A2B00A4659A /* Build configuration list for PBXProject "Hadouken2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EF4341A15AA3A2B00A4659A;
+			productRefGroup = 4EF4342615AA3A2B00A4659A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EF4342415AA3A2B00A4659A /* Hadouken2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EF4342315AA3A2B00A4659A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF4343415AA3A2B00A4659A /* InfoPlist.strings in Resources */,
+				4EF4348E15AA3CCA00A4659A /* tablet.png in Resources */,
+				4EF4349815AA428800A4659A /* Enochian.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EF4342115AA3A2B00A4659A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF4343615AA3A2B00A4659A /* main.m in Sources */,
+				4EF4343A15AA3A2B00A4659A /* HDAppDelegate.m in Sources */,
+				4EF4343D15AA3A2B00A4659A /* HDViewController.m in Sources */,
+				4EF4347E15AA3B4E00A4659A /* AFHTTPClient.m in Sources */,
+				4EF4347F15AA3B4E00A4659A /* AFHTTPRequestOperation.m in Sources */,
+				4EF4348015AA3B4E00A4659A /* AFImageRequestOperation.m in Sources */,
+				4EF4348115AA3B4E00A4659A /* AFJSONRequestOperation.m in Sources */,
+				4EF4348215AA3B4E00A4659A /* AFJSONUtilities.m in Sources */,
+				4EF4348315AA3B4E00A4659A /* AFNetworkActivityIndicatorManager.m in Sources */,
+				4EF4348415AA3B4E00A4659A /* AFPropertyListRequestOperation.m in Sources */,
+				4EF4348515AA3B4E00A4659A /* AFURLConnectionOperation.m in Sources */,
+				4EF4348615AA3B4E00A4659A /* AFXMLRequestOperation.m in Sources */,
+				4EF4348715AA3B4E00A4659A /* UIImageView+AFNetworking.m in Sources */,
+				4EF4349415AA3D8900A4659A /* HDTabletCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4EF4343215AA3A2B00A4659A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EF4343315AA3A2B00A4659A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EF4344115AA3A2B00A4659A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EF4344215AA3A2B00A4659A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EF4344415AA3A2B00A4659A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hadouken2/Hadouken2-Prefix.pch";
+				INFOPLIST_FILE = "Hadouken2/Hadouken2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4EF4344515AA3A2B00A4659A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hadouken2/Hadouken2-Prefix.pch";
+				INFOPLIST_FILE = "Hadouken2/Hadouken2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EF4341F15AA3A2B00A4659A /* Build configuration list for PBXProject "Hadouken2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF4344115AA3A2B00A4659A /* Debug */,
+				4EF4344215AA3A2B00A4659A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF4344315AA3A2B00A4659A /* Build configuration list for PBXNativeTarget "Hadouken2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF4344415AA3A2B00A4659A /* Debug */,
+				4EF4344515AA3A2B00A4659A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EF4341C15AA3A2B00A4659A /* Project object */;
+}
