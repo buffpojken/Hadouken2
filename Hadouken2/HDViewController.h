@@ -15,4 +15,6 @@
     NSMutableString *currentSpell;
 }
 
+-(void)notifyServer:(NSDictionary*)spell;
+
 @end

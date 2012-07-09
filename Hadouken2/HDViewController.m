@@ -8,6 +8,7 @@
 
 #import "HDViewController.h"
 #import "HDTabletCell.h"
+#import "HDNetworkClient.h"
 
 @interface HDViewController ()
 
@@ -19,10 +20,19 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tablet.png"]];
-    
-    spells = [NSArray arrayWithObjects:@",0,1,2,3", @",4,5,6,7", nil];
-    [spells retain];
-    
+    [[HDNetworkClient sharedClient] getPath:@"/" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        spells = [NSArray arrayWithArray:[responseObject objectForKey:@"spells"]]; 
+        [spells retain];
+        [self drawCells];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        NSLog(@"Could not load the spells...");
+    }];
+
+}
+
+
+-(void)drawCells{
     cells = [[NSMutableArray alloc] init];
     int f = 0;
     for(int j = 1; j < 7; j++){
@@ -36,6 +46,7 @@
     }
 }
 
+
 -(void)cellReceivedTouch:(HDTabletCell*)cell withTouch:(UITouch*)touch{
     CGPoint point = [touch locationInView:self.view];
     for(HDTabletCell *cell in cells){
@@ -48,17 +59,29 @@
     }
 }
 
+
 -(void)touchesEnded:(HDTabletCell*)cell withTouch:(UITouch*)touch{    
-    NSLog(@"%@", currentSpell);
     for(HDTabletCell *cell in cells){
         [cell deactivate];            
     }
-    for(NSString *spell in spells){
-        if([currentSpell isEqualToString:spell]){
-            NSLog(@"Do magic...");
+    for(NSDictionary *spell in spells){        
+        NSLog(@"%@", spell);
+        if([currentSpell isEqualToString:[spell objectForKey:@"key"]]){            
+            [self notifyServer:spell];
+            return;            
         }
     }
 }
+
+-(void)notifyServer:(NSDictionary*)spell{
+    [[HDNetworkClient sharedClient] postPath:@"/" parameters:[NSDictionary dictionaryWithObject:[spell objectForKey:@"id"] forKey:@"spell_id"] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Magic happens!" message:[NSString stringWithFormat:@"You throw %@ for X points of mana", [spell objectForKey:@"name"]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure...");
+    }];
+}
+
 
 -(void)touchesBegan:(HDTabletCell*)cell withTouch:(UITouch*)touch{
     if(currentSpell){
