@@ -9,6 +9,8 @@
 #import "HDViewController.h"
 #import "HDTabletCell.h"
 #import "HDNetworkClient.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import "ALToastView.h"
 
 @interface HDViewController ()
 
@@ -71,12 +73,18 @@
             return;            
         }
     }
+    SystemSoundID down; 
+    AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"powerdown" ofType:@"wav"]], &down);
+    AudioServicesPlaySystemSound(down);
+//    AudioServicesDisposeSystemSoundID(wand); 
 }
 
 -(void)notifyServer:(NSDictionary*)spell{
     [[HDNetworkClient sharedClient] postPath:@"/" parameters:[NSDictionary dictionaryWithObject:[spell objectForKey:@"id"] forKey:@"spell_id"] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Magic happens!" message:[NSString stringWithFormat:@"You throw %@ for X points of mana", [spell objectForKey:@"name"]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+        SystemSoundID wand; 
+        AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"wand" ofType:@"wav"]], &wand);
+        AudioServicesPlaySystemSound(wand);
+        [ALToastView toastInView:self.view withText:[NSString stringWithFormat:@"Casting %@ for X mana", [spell objectForKey:@"name"]]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failure...");
     }];

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4E0E6C1215AB085700185C68 /* HDNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E6C1115AB085700185C68 /* HDNetworkClient.m */; };
+		4E0E6C1415AB0DC900185C68 /* powerdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E6C1315AB0DC900185C68 /* powerdown.wav */; };
+		4E0E6C1615AB0DF500185C68 /* wand.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E6C1515AB0DF500185C68 /* wand.wav */; };
+		4E0E6C1C15AB0E2200185C68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0E6C1B15AB0E2200185C68 /* AudioToolbox.framework */; };
+		4E0E6C2215AB0F6600185C68 /* ALToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E6C2115AB0F6600185C68 /* ALToastView.m */; };
 		4EF4342A15AA3A2B00A4659A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342915AA3A2B00A4659A /* UIKit.framework */; };
 		4EF4342C15AA3A2B00A4659A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342B15AA3A2B00A4659A /* Foundation.framework */; };
 		4EF4342E15AA3A2B00A4659A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */; };
@@ -33,6 +37,11 @@
 /* Begin PBXFileReference section */
 		4E0E6C1015AB085700185C68 /* HDNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetworkClient.h; sourceTree = "<group>"; };
 		4E0E6C1115AB085700185C68 /* HDNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworkClient.m; sourceTree = "<group>"; };
+		4E0E6C1315AB0DC900185C68 /* powerdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerdown.wav; sourceTree = "<group>"; };
+		4E0E6C1515AB0DF500185C68 /* wand.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wand.wav; sourceTree = "<group>"; };
+		4E0E6C1B15AB0E2200185C68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4E0E6C2015AB0F6600185C68 /* ALToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToastView.h; sourceTree = "<group>"; };
+		4E0E6C2115AB0F6600185C68 /* ALToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToastView.m; sourceTree = "<group>"; };
 		4EF4342515AA3A2B00A4659A /* Hadouken2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hadouken2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF4342915AA3A2B00A4659A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF4342B15AA3A2B00A4659A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0E6C1C15AB0E2200185C68 /* AudioToolbox.framework in Frameworks */,
 				4EF4342A15AA3A2B00A4659A /* UIKit.framework in Frameworks */,
 				4EF4342C15AA3A2B00A4659A /* Foundation.framework in Frameworks */,
 				4EF4342E15AA3A2B00A4659A /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0E6C1D15AB0F1200185C68 /* ALToastView */ = {
+			isa = PBXGroup;
+			children = (
+				4E0E6C2015AB0F6600185C68 /* ALToastView.h */,
+				4E0E6C2115AB0F6600185C68 /* ALToastView.m */,
+			);
+			name = ALToastView;
+			sourceTree = "<group>";
+		};
 		4EF4341A15AA3A2B00A4659A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +125,7 @@
 		4EF4342815AA3A2B00A4659A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E0E6C1B15AB0E2200185C68 /* AudioToolbox.framework */,
 				4EF4342915AA3A2B00A4659A /* UIKit.framework */,
 				4EF4342B15AA3A2B00A4659A /* Foundation.framework */,
 				4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */,
@@ -153,6 +173,7 @@
 		4EF4344715AA3B1100A4659A /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				4E0E6C1D15AB0F1200185C68 /* ALToastView */,
 				4EF4346815AA3B4E00A4659A /* AFNetworking */,
 			);
 			name = libs;
@@ -190,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				4EF4349715AA428800A4659A /* Enochian.ttf */,
+				4E0E6C1315AB0DC900185C68 /* powerdown.wav */,
+				4E0E6C1515AB0DF500185C68 /* wand.wav */,
 				4EF4348D15AA3CCA00A4659A /* tablet.png */,
 			);
 			name = Resources;
@@ -249,6 +272,8 @@
 				4EF4343415AA3A2B00A4659A /* InfoPlist.strings in Resources */,
 				4EF4348E15AA3CCA00A4659A /* tablet.png in Resources */,
 				4EF4349815AA428800A4659A /* Enochian.ttf in Resources */,
+				4E0E6C1415AB0DC900185C68 /* powerdown.wav in Resources */,
+				4E0E6C1615AB0DF500185C68 /* wand.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +299,7 @@
 				4EF4348715AA3B4E00A4659A /* UIImageView+AFNetworking.m in Sources */,
 				4EF4349415AA3D8900A4659A /* HDTabletCell.m in Sources */,
 				4E0E6C1215AB085700185C68 /* HDNetworkClient.m in Sources */,
+				4E0E6C2215AB0F6600185C68 /* ALToastView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
