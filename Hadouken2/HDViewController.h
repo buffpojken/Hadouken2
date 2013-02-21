@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "HDTabletCell.h"
+#import "HDDistributionManager.h"
 
-@interface HDViewController : UIViewController<HDTabletCellDelegate>{
+@interface HDViewController : UIViewController<HDTabletCellDelegate, HDDistributionManagerDelegate>{
     NSMutableArray *cells;
     NSArray *spells; 
     NSMutableString *currentSpell;
 }
 
 -(void)notifyServer:(NSDictionary*)spell;
+-(void)hideImageView:(UITapGestureRecognizer*)recog;
+-(void)reloadSpells:(UILongPressGestureRecognizer*)recog;
 
 @end

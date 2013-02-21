@@ -12,6 +12,7 @@
 		4E0E6C1615AB0DF500185C68 /* wand.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E6C1515AB0DF500185C68 /* wand.wav */; };
 		4E0E6C1C15AB0E2200185C68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0E6C1B15AB0E2200185C68 /* AudioToolbox.framework */; };
 		4E0E6C2215AB0F6600185C68 /* ALToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E6C2115AB0F6600185C68 /* ALToastView.m */; };
+		4E4EB07F15ADFDE300E7695E /* HDDistributionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB07E15ADFDE300E7695E /* HDDistributionManager.m */; };
 		4EF4342A15AA3A2B00A4659A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342915AA3A2B00A4659A /* UIKit.framework */; };
 		4EF4342C15AA3A2B00A4659A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342B15AA3A2B00A4659A /* Foundation.framework */; };
 		4EF4342E15AA3A2B00A4659A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF4342D15AA3A2B00A4659A /* CoreGraphics.framework */; };
@@ -42,6 +43,9 @@
 		4E0E6C1B15AB0E2200185C68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E0E6C2015AB0F6600185C68 /* ALToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToastView.h; sourceTree = "<group>"; };
 		4E0E6C2115AB0F6600185C68 /* ALToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToastView.m; sourceTree = "<group>"; };
+		4E4EB07D15ADFDE300E7695E /* HDDistributionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDistributionManager.h; sourceTree = "<group>"; };
+		4E4EB07E15ADFDE300E7695E /* HDDistributionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDistributionManager.m; sourceTree = "<group>"; };
+		4EE9BA6115AF7EFC00DFF8CD /* Hadouken2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Hadouken2.entitlements; sourceTree = "<group>"; };
 		4EF4342515AA3A2B00A4659A /* Hadouken2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hadouken2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF4342915AA3A2B00A4659A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF4342B15AA3A2B00A4659A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +140,7 @@
 		4EF4342F15AA3A2B00A4659A /* Hadouken2 */ = {
 			isa = PBXGroup;
 			children = (
+				4EE9BA6115AF7EFC00DFF8CD /* Hadouken2.entitlements */,
 				4EF4348815AA3C2200A4659A /* Resources */,
 				4EF4344615AA3B0C00A4659A /* Utils */,
 				4EF4343815AA3A2B00A4659A /* HDAppDelegate.h */,
@@ -147,6 +152,8 @@
 				4EF4349315AA3D8900A4659A /* HDTabletCell.m */,
 				4E0E6C1015AB085700185C68 /* HDNetworkClient.h */,
 				4E0E6C1115AB085700185C68 /* HDNetworkClient.m */,
+				4E4EB07D15ADFDE300E7695E /* HDDistributionManager.h */,
+				4E4EB07E15ADFDE300E7695E /* HDDistributionManager.m */,
 			);
 			path = Hadouken2;
 			sourceTree = "<group>";
@@ -300,6 +307,7 @@
 				4EF4349415AA3D8900A4659A /* HDTabletCell.m in Sources */,
 				4E0E6C1215AB085700185C68 /* HDNetworkClient.m in Sources */,
 				4E0E6C2215AB0F6600185C68 /* ALToastView.m in Sources */,
+				4E4EB07F15ADFDE300E7695E /* HDDistributionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,10 +371,21 @@
 		4EF4344415AA3A2B00A4659A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Hadouken2/Hadouken2.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Sundström (457AVPF4UC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hadouken2/Hadouken2-Prefix.pch";
 				INFOPLIST_FILE = "Hadouken2/Hadouken2-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C8C2C353-1DF0-4012-BAD8-B32442E41786";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,10 +393,21 @@
 		4EF4344515AA3A2B00A4659A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Hadouken2/Hadouken2.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sykewarrior";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hadouken2/Hadouken2-Prefix.pch";
 				INFOPLIST_FILE = "Hadouken2/Hadouken2-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C27DF6A1-5795-481A-A526-DE2B388937FF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

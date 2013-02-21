@@ -18,7 +18,7 @@
     static AFHTTPClient *client = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        client = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://0.0.0.0:4567/"]];
+        client = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://creator.sykewarrior.com/"]];
         [client registerHTTPOperationClass:[AFJSONRequestOperation class]];
         [client setDefaultHeader:@"Accept" value:@"application/json"];        
     });
